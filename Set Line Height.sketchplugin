@@ -1,0 +1,12 @@
+// sets the line height as multiple of the font size (cmd l)
+
+for (var i = 0; i < selection.length(); i++) {
+  var s = selection[i]
+
+  if([s class] === MSTextLayer){
+  	var lineSpacing = parseFloat([doc askForUserInput:"Line height in em:" initialValue:1]);
+  	var fontSize = [s fontSize]
+  	lineSpacing = fontSize * lineSpacing
+    [s setLineSpacing:lineSpacing]
+  }
+}
