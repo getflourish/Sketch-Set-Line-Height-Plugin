@@ -11,7 +11,7 @@ for (var i = 0; i < selection.length(); i++) {
 	if([s class] === MSTextLayer){
 
 		// Show a dialog, asking for the line height multiple
-		var lineSpacing = parseFloat([doc askForUserInput:"Line Height Multiple :" initialValue:1]);
+		var lineSpacing = parseFloat([doc askForUserInput:"Line Height Multiple:" initialValue:1]);
 
 		// Calculate the line height based on the font size and multiple
 		var fontSize = [s fontSize];
