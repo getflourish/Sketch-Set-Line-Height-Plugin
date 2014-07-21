@@ -1,12 +1,21 @@
 // Sets the line height as multiple of the font size (cmd l)
 
+// Loop through selected layers
+
 for (var i = 0; i < selection.length(); i++) {
-	var s = selection[i]
+
+	var s = selection[i];
+
+	// Check if the layer is a text layer
 
 	if([s class] === MSTextLayer){
-  		var lineSpacing = parseFloat([doc askForUserInput:"Line height in em:" initialValue:1]);
-  		var fontSize = [s fontSize]
-  		lineSpacing = fontSize * lineSpacing
-    	[s setLineSpacing:lineSpacing]
+
+		// Show a dialog, asking for the line height multiple
+		var lineSpacing = parseFloat([doc askForUserInput:"Line Height Multiple :" initialValue:1]);
+
+		// Calculate the line height based on the font size and multiple
+		var fontSize = [s fontSize];
+		lineSpacing = fontSize * lineSpacing;
+		[s setLineSpacing:lineSpacing];
   	}
 }
