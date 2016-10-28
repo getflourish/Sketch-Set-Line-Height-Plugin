@@ -27,6 +27,10 @@ var onRun = function (context) {
   		// Calculate initial line height
   		var fontSize = firstTextLayer.fontSize();
   		var lineHeight = firstTextLayer.lineHeight();
+
+      // Sketch returns 0 as a value when line height is set to "auto"
+      if (!lineHeight) lineHeight = fontSize;
+
   		var multiple = (lineHeight / fontSize).toFixed(1);
 
   		// Show a dialog, asking for the line height multiple
