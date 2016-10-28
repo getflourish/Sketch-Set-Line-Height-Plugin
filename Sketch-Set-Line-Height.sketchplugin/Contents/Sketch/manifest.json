@@ -1,0 +1,23 @@
+{
+  "name": "Set Line Height",
+  "description": "Set line height relative to font size",
+  "author": "Florian Schulz",
+  "homepage": "http://github.com/getflourish",
+  "version": 1.0,
+  "identifier": "com.getflourish.setlineheight",
+  "compatibleVersion": 3.9,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Set Line Height",
+      "identifier": "set",
+      "shortcut": "cmd l",
+      "script": "script.js",
+    }
+  ],
+  "menu": {
+    "items": [
+      "set"
+    ]
+  }
+}
