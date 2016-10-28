@@ -3,7 +3,7 @@
   "description": "Set line height relative to font size",
   "author": "Florian Schulz",
   "homepage": "http://github.com/getflourish",
-  "version": 1.0,
+  "version": 2.0,
   "identifier": "com.getflourish.setlineheight",
   "compatibleVersion": 3.9,
   "bundleVersion": 1,
