@@ -5,7 +5,7 @@ var textLayers = [];
 if (selection.count() > 0) {
 
 	// Loop through selected layers
-	for (var i = 0; i < selection.length(); i++) {
+	for (var i = 0; i < selection.count(); i++) {
 
 		var s = selection[i];
 
@@ -22,7 +22,7 @@ if (selection.count() > 0) {
 
 		// Calculate initial line height
 		var fontSize = firstTextLayer.fontSize();
-		var lineHeight = firstTextLayer.lineSpacing();
+		var lineHeight = firstTextLayer.lineHeight();
 		var multiple = (lineHeight / fontSize).toFixed(1);
 
 		// Show a dialog, asking for the line height multiple
@@ -35,7 +35,7 @@ if (selection.count() > 0) {
 			// Calculate the line height based on the font size and multiple
 			var fontSize = textLayer.fontSize();
 			var lineHeight = fontSize * lineSpacing;
-			textLayer.setLineSpacing(lineHeight);
+			textLayer.setLineHeight(lineHeight);
 		}
 
 	} else {
