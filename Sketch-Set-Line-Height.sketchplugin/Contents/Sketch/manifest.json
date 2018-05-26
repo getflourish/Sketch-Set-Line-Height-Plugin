@@ -12,7 +12,7 @@
       "name": "Set Line Height",
       "identifier": "set",
       "shortcut": "cmd l",
-      "script": "script.js",
+      "script": "script.js"
     }
   ],
   "menu": {
