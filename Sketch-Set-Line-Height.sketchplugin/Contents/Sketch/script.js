@@ -34,7 +34,9 @@ var onRun = function (context) {
   		var multiple = (lineHeight / fontSize).toFixed(1);
 
   		// Show a dialog, asking for the line height multiple
-  		var lineSpacing = parseFloat([doc askForUserInput:"Line Height Multiple:" initialValue:multiple]);
+  		var lineSpacing = parseFloat([doc askForUserInput:"Line height multiple" initialValue:multiple]);
+			// Show a dialog, asking for how many decimals in the line height value
+			var decimals = parseFloat([doc askForUserInput:"Round to this many decimals" initialValue:0]);
 
   		for (var j = 0; j < textLayers.length; j++) {
 
@@ -43,8 +45,10 @@ var onRun = function (context) {
   			// Calculate the line height based on the font size and multiple
   			var fontSize = textLayer.fontSize();
   			var lineHeight = fontSize * lineSpacing;
-  			textLayer.setLineHeight(lineHeight);
+  			textLayer.setLineHeight(lineHeight.toFixed(decimals));
   		}
+
+			doc.showMessage("Assigned " + lineSpacing + " line height to " + textLayers.length + " layer[s] with " + decimals + " decimal[s].");
 
   	} else {
   		doc.showMessage("Please select a text layer.");
